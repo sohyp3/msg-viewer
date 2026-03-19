@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Message } from '$lib/types/supabase';
-	import { formatTime } from '$lib/utils/date';
+	import { formatDayTime } from '$lib/utils/date';
 	import { isBotSender } from '$lib/utils/messages';
 
 	let { message }: { message: Message } = $props();
@@ -18,6 +18,8 @@
 			{senderLabel}
 		</p>
 		<p class="text-sm leading-5 break-words whitespace-pre-wrap">{message.content}</p>
-		<p class="mt-1 text-right text-[11px] text-whatsapp-muted">{formatTime(message.created_at)}</p>
+		<p class="mt-1 text-right text-[11px] text-whatsapp-muted">
+			{formatDayTime(message.created_at)}
+		</p>
 	</div>
 </div>
