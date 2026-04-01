@@ -23,6 +23,8 @@
 			userId: string;
 			rowCount: number;
 			contactCount: number;
+			pagesFetched: number;
+			pageSize: number;
 			sampleWaNo: string[];
 			queryError: string | null;
 			rawSample: Array<Record<string, unknown>>;
@@ -152,6 +154,14 @@
 					<p>
 						<span class="font-semibold text-whatsapp-ink">Contacts:</span>
 						{data.debug.contactCount}
+					</p>
+					<p>
+						<span class="font-semibold text-whatsapp-ink">Pages fetched:</span>
+						{data.debug.pagesFetched}
+					</p>
+					<p>
+						<span class="font-semibold text-whatsapp-ink">Page size:</span>
+						{data.debug.pageSize}
 					</p>
 					<p>
 						<span class="font-semibold text-whatsapp-ink">Sample wa_no:</span>
